@@ -1,12 +1,11 @@
-var gulp = require('gulp');
-var eslint = require('gulp-eslint');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
 
-var PATH = 'index.js';
-
-gulp.task('eslint', function () {
-  return gulp.src(PATH)
+gulp.task('lint', function () {
+  return gulp.src(['**/*.js','!node_modules/**'])
     .pipe(eslint())
-    .pipe(eslint.format());
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
-gulp.task('default', ['eslint']);
+gulp.task('default', ['lint']);
