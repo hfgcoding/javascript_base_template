@@ -1,6 +1,10 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+        "ecmaVersion": 2017
   },
   "rules": {
     "brace-style": [2, "1tbs"],
