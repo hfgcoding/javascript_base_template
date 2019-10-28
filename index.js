@@ -10,4 +10,4 @@
  */
 
 //Your actual code - replace everything from here on!
-console.log("Hello world");
+console.log('Hello world');
